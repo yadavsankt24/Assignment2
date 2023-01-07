@@ -1,19 +1,19 @@
 .upperSection {
   background-image: url(../assets/upeer-background.png);
-  display: flex;
+  display: grid;
   justify-content: space-between;
+  grid-template-columns: repeat(2, 50%);
   width: 95%;
   margin: auto;
   background-size: 113rem 34rem;
-  /* border: 2px solid red */
 }
 
 .about {
   display: grid;
-  height: 10rem;
+  /* height: 5rem; */
   margin: auto;
   margin-left: 5rem;
-  width: 25%;
+  width: 80%;
 }
 
 .about h1 {
@@ -38,7 +38,7 @@
 
 .about img {
   position: absolute;
-  left: 15.8%;  
+  left: 15.8%;
   /* right: 31.76%; */
   top: 30.83%;
   /* bottom: 93.48%;   */
@@ -116,7 +116,6 @@
   margin-bottom: 5rem;
   padding: 2rem;
   /* border: 2px solid red;     */
-
 }
 
 .areaExpert {
@@ -129,7 +128,6 @@
   font-size: 36px;
   /* line-height: 49px; */
   color: #231f20;
-  
 }
 
 .para {
@@ -162,9 +160,9 @@
 }
 
 .project {
-    /* border: 2px solid red; */
+  /* border: 2px solid red; */
   width: 95%;
-margin: auto;
+  margin: auto;
   display: flex;
   justify-content: space-evenly;
   margin-top: 5rem;
@@ -187,62 +185,132 @@ margin: auto;
 }
 
 .company {
-    /* border: 2px solid red; */
+  /* border: 2px solid red; */
   width: 95%;
-margin: auto;
+  margin: auto;
   display: flex;
   justify-content: space-evenly;
   margin-top: 5rem;
   margin-bottom: 5rem;
   align-items: center;
-  background: #F7F7F7;
+  background: #f7f7f7;
 }
 
-
-.footerImg{
-    background-image: url(../assets/footer.png);
-    background-size:cover;
+.footerImg {
+  background-image: url(../assets/footer.png);
+  background-size: cover;
 }
 
-
-.footerSearch{
-    /* border: 5px solid red; */
-    border-radius: 20px;
-font-family: 'Nunito Sans';
-font-style: normal;
-font-weight: 400;
-font-size: 14px;
-line-height: 19px;
-color: #FFFFFF;
+.footerSearch {
+  /* border: 5px solid red; */
+  border-radius: 20px;
+  font-family: "Nunito Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 19px;
+  color: #ffffff;
 }
 
-.footerSearchDiv{
-    background-color: linear-gradient(90deg, #201c18 0%, #E71A86 100%);
-    transform: matrix(1, -0.01, 0.01, 1, 0, 0);
+.footerSearchDiv {
+  background-color: linear-gradient(90deg, #201c18 0%, #e71a86 100%);
+  transform: matrix(1, -0.01, 0.01, 1, 0, 0);
 }
 
-.social{
-    display: flex;
-    gap: 20px;
-    
+.social {
+  display: flex;
+  gap: 20px;
 }
 
-.navContent{
-    display: flex;
-    justify-content: space-between;
-    border: 2px solid red;
-    position: sticky;
-    border-color: transparent;
-    align-items: center;
+.navContent {
+  display: flex;
+  justify-content: space-between;
+  border: 2px solid red;
+  position: sticky;
+  border-color: transparent;
+  align-items: center;
 }
 
-.navImage{
-    margin-left: 2rem;
+.navImage {
+  margin-left: 2rem;
 }
-.navright{
-    align-items: center;
+.navright {
+  align-items: center;
 
-width: 70%;
-    display: flex;
-justify-content: space-around;
+  width: 70%;
+  display: flex;
+  justify-content: space-around;
+}
+
+@media screen and (max-width: 1500px) {
+  .upperSection {
+    grid-template-columns: repeat(1, 1fr);
+    margin: auto;
+  }
+ 
+  .about h1 {
+    display: block;
+  }
+  .about img {
+    display: none;
+  }
+
+  
+.midsection {
+  display: grid;
+  margin: auto;
+  grid-template-columns: repeat(1,1fr);
+  width: 40%;
+}
+
+.midsection > div {
+  width: 100%;
+}
+
+.midsection > div :nth-child(2) {
+  width: 120%;
+  font-family: "Nunito Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 25px;
+  color: #878787;
+}
+.vision {
+  text-align: center;
+  font-family: "Nunito Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 49px;
+  color: #231f20;
+}
+
+.midsectionLow {
+  display: grid;
+  grid-template-columns: repeat(1,1fr);
+  width: 50%;
+  margin: auto;
+}
+
+.midsectionLow > div :nth-child(2) {
+  width: 100%;
+  font-family: "Nunito Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 25px;
+  color: #878787;
+}
+
+.midsectionLow > div {
+  width: 100%;
+}
+
+.move {
+  width: 100%;
+  /* border: 3px solid green; */
+  margin: auto;
+  margin-bottom: 5rem;
+}
 }

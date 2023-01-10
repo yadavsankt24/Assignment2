@@ -74,8 +74,11 @@ const Footer = () => {
           </Column>
         </Row>
       </Container>
-      <Container>
+      <Container >
+        <div className={styles.footerImage}>
+          
         <Image styler={styles.footerImg} img={people} />
+        </div>
       </Container>
     </Box>
   );

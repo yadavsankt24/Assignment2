@@ -1,3 +1,9 @@
+*{
+  margin: 0px;
+  padding: 0px;
+}
+
+
 .upperSection {
   background-image: url(../assets/upeer-background.png);
   display: grid;
@@ -5,7 +11,7 @@
   grid-template-columns: repeat(2, 50%);
   width: 95%;
   margin: auto;
-  background-size: 113rem 34rem;
+  background-size:100% ;
 }
 
 .about {
@@ -38,9 +44,9 @@
 
 .about img {
   position: absolute;
-  left: 15.8%;
+  left: 12.8%;
   /* right: 31.76%; */
-  top: 30.83%;
+  top: 32.83%;
   /* bottom: 93.48%;   */
 }
 
@@ -48,6 +54,18 @@
   /* border: 1px solid red; */
   width: 50%;
   justify-items: center;
+}
+
+/* .imageDiv {
+  border: 1px solid red;
+  width: 50%;
+  justify-items: center;
+} */
+
+
+.people_Image{
+  /* border:2px solid red; */
+  width: 80%;
 }
 
 .midsection {
@@ -163,10 +181,13 @@
   /* border: 2px solid red; */
   width: 95%;
   margin: auto;
-  display: flex;
-  justify-content: space-evenly;
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+
+  line-height: 1rem;
   margin-top: 5rem;
   margin-bottom: 5rem;
+  text-align: center;
   align-items: center;
 }
 
@@ -175,9 +196,10 @@
   font-style: normal;
   font-weight: 400;
   font-size: 48px;
-  line-height: 5px;
+  line-height: 5rem;
   color: #231f20;
   text-align: center;
+
 }
 
 .projectPara2 {
@@ -196,11 +218,13 @@
   background: #f7f7f7;
 }
 
-.footerImg {
+.footerImage{
   background-image: url(../assets/footer.png);
+  width: 100vw;
+  /* border: 2px solid red; */
+  
   background-size: cover;
 }
-
 .footerSearch {
   /* border: 5px solid red; */
   border-radius: 20px;
@@ -225,7 +249,7 @@
 .navContent {
   display: flex;
   justify-content: space-between;
-  border: 2px solid red;
+  /* border: 2px solid red; */
   position: sticky;
   border-color: transparent;
   align-items: center;
@@ -242,14 +266,33 @@
   justify-content: space-around;
 }
 
+.visionImage{
+  width: 90%;
+}
+
+.footerImage{
+  /* border: 2px solid red; */
+  width: 100%;
+}
+
+
 @media screen and (max-width: 1500px) {
+
+  .people_Image{
+    /* border:2px solid red; */
+    margin-left: 30%;
+    width: 45%;
+  }
+  
+
+
   .upperSection {
     grid-template-columns: repeat(1, 1fr);
     margin: auto;
   }
  
   .about h1 {
-    display: block;
+    text-align: center;
   }
   .about img {
     display: none;
@@ -309,8 +352,33 @@
 
 .move {
   width: 100%;
-  /* border: 3px solid green; */
   margin: auto;
   margin-bottom: 5rem;
 }
+
+.card {
+
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.project {
+  /* display: grid; */
+  justify-items: center;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.projectPara2{
+  font-weight: 600;
+  line-height:4.5rem ;
+}
+
+
+.company{
+  display: grid;
+  text-align: center;
+  grid-template-columns: repeat(2,1fr);
+}
+
+
+
 }

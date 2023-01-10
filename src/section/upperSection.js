@@ -21,20 +21,17 @@ import kanvas from "../assets/kanvas.png";
 import olympus from "../assets/olympus.png";
 import travis from "../assets/travel.png";
 
-
-
-
-
 import styles from "./uppersection.module.css";
 import { Head } from "./Head";
 import { Image } from "./Image";
 import { Paragraph } from "./Paragraph";
 import Footer from "./Footer";
+import About from "./About";
 
 export const UpperSection = () => {
   return (
     <div>
-        <Navbar/>
+      <Navbar />
       <div className={styles.upperSection}>
         <div className={styles.about}>
           <h1>About Us</h1>
@@ -43,13 +40,13 @@ export const UpperSection = () => {
             industry. Lorem Ipsum has been the industry's standard dummy text
             ever since the 1500s,
           </p>
-          <img src={img2} />
+          <Image img={img2} />
         </div>
-        <div className={styles.imageDiv}>
-          <img src={img1} alt="" />
+        <div>
+          <Image styler={styles.people_Image} img={img1} alt="" />
         </div>
       </div>
-
+      <About />
       <div
         style={{
           width: "95%",
@@ -79,7 +76,7 @@ export const UpperSection = () => {
       >
         <div className={styles.midsectionLow}>
           <div>
-            <Image img={img5} />
+            <Image styler={styles.visionImage} img={img5} />
           </div>
           <div>
             <Head styler={styles.vision} h1={"Our Vision"} />
